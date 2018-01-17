@@ -1,0 +1,34 @@
+Do steps below for correct program behavior!
+------------------------------------------------------------------------------------------------------------
+Set desired time interval for updating:
+- open Run/Debug Configurations;
+- add program argument (int seconds);
+------------------------------------------------------------------------------------------------------------
+For using database:
+- create oracle db;
+- create user;
+- change his grants.
+
+You can check/change db credentials in OracleConn class.
+------------------------------------------------------------------------------------------------------------
+(Optional) Add new weather source:
+- inspect API docs;
+- go to WeatherSourcesRepository class;
+- add your source inside initAllWeatherSources() method.
+
+Example:
+result.add(new WeatherSource(
+                    "worldweatheronline.com",
+                    "https://api.worldweatheronline.com/premium/v1/weather.ashx?&format=json&fx=no&mca=no",
+                    "key=9151cf8acf5848d8a0f73630181701",
+                    "q=46.4761438,30.7489421",
+                    "temp_C",
+                    "windspeedKmph",
+                    "winddirDegree",
+                    "humidity",
+                    "pressure"
+                    ));
+------------------------------------------------------------------------------------------------------------
+Page for getting current average data:
+http://localhost:8889/avg
+------------------------------------------------------------------------------------------------------------
